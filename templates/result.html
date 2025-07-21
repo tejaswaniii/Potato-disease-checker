@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            padding: 50px;
+            text-align: center;
+        }
+        .result-box {
+            background: white;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2e7d32;
+        }
+        .disease {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        a:hover {
+            background: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Prediction Result</h2>
+        <img src="{{ image_path }}" alt="Uploaded Leaf Image">
+        <p class="disease">Detected: {{ disease }}</p>
+        <a href="/">Check Another Leaf</a>
+    </div>
+</body>
+</html>
